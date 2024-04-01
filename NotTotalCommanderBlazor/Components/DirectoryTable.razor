@@ -1,0 +1,41 @@
+﻿@using NotTotalCommanderLib.Infrastructure.DirectoryContent
+
+<RadzenDataGrid
+    Style="height: 90vh; overflow: auto"
+    TItem="DirectoryContentModel"
+    FilterPopupRenderMode="PopupRenderMode.OnDemand"
+    SelectionMode="DataGridSelectionMode.Single"
+    CellContextMenu="@OnCellContextMenu"
+    RowDoubleClick="@((a) => ChangeDirectoryDown(a.Data.Name))"
+    ValueChanged="@(row => OnSelectChange(row))"
+    Data="@DirectoryContent">
+    <HeaderTemplate>
+        @if (!IsRoot)
+        {
+            <RadzenStack Orientation="Orientation.Horizontal">
+                <RadzenButton Icon="arrow_back" Click=@ChangeDirectoryUp/>
+                @if (!IsCreatingNewDirectory)
+                {
+                    <RadzenButton Text="Новая папка" Click="@ToggleCreatingNewDirectory"/>
+                }
+                else
+                {
+                    <RadzenTextBox @bind-Value=@newDirectoryName Placeholder="Наименование" class="w-100"/>
+                    <RadzenButton Icon="close" ButtonStyle="ButtonStyle.Danger" Click="@ToggleCreatingNewDirectory"/>
+                    <RadzenButton Icon="done" ButtonStyle="ButtonStyle.Success" Click="@CreateDirectory"/>
+                }
+            </RadzenStack>
+            <RadzenText Style="color: red" Text="@ErrorText"/>
+        }
+    </HeaderTemplate>
+    <Columns>
+        <RadzenDataGridColumn TItem="DirectoryContentModel" Property="Name" Width="50px">
+            <Template Context="element">
+                <RadzenStack Orientation="Orientation.Horizontal">
+                    <RadzenIcon Icon="@GetFileIcon(element.DirectoryContentType)"/>
+                    <RadzenText>@element.Name</RadzenText>
+                </RadzenStack>
+            </Template>
+        </RadzenDataGridColumn>
+    </Columns>
+</RadzenDataGrid>

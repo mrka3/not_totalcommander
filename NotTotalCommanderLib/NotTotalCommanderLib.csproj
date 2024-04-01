@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
+            Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{8F17CDA5-8C35-45C1-9098-C019D7454B51}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>NotTotalCommanderLib</RootNamespace>
+        <AssemblyName>NotTotalCommanderLib</AssemblyName>
+        <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Xml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Infrastructure\Directories\DirectoryModel.cs" />
+        <Compile Include="Infrastructure\Directories\DirectoryService.cs" />
+        <Compile Include="Infrastructure\Directories\DirectoryValidator.cs" />
+        <Compile Include="Infrastructure\DirectoryContent\DirectoryContentModel.cs" />
+        <Compile Include="Infrastructure\DirectoryContent\DirectoryContentService.cs" />
+        <Compile Include="Infrastructure\DirectoryContent\DirectoryContentType.cs" />
+        <Compile Include="Infrastructure\Drives\DriveModel.cs" />
+        <Compile Include="Infrastructure\Drives\DriveService.cs" />
+        <Compile Include="Infrastructure\Exceptions\CreateDirectoryValidationFailedException.cs" />
+        <Compile Include="Infrastructure\FileContent\FileContentModel.cs" />
+        <Compile Include="Infrastructure\FileContent\FileContentService.cs" />
+        <Compile Include="Infrastructure\FileContent\FileContentType.cs" />
+        <Compile Include="Infrastructure\Files\FileModel.cs" />
+        <Compile Include="Infrastructure\Files\FileService.cs" />
+        <Compile Include="Infrastructure\Routing\GetDirectoryContentModel.cs" />
+        <Compile Include="Infrastructure\Routing\PathService.cs" />
+        <Compile Include="Infrastructure\Routing\RouteService.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>

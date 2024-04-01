@@ -1,0 +1,21 @@
+﻿@using NotTotalCommanderLib.Infrastructure.FileContent
+@switch (FileContentModel?.FileContentType)
+{
+    case FileContentType.Other:
+        <RadzenStack Style="height: 100%" JustifyContent="JustifyContent.Center" AlignItems="AlignItems.Center">
+            <RadzenText>Формат файла не поддерживается для просмотра</RadzenText>
+        </RadzenStack>
+        break;
+    case FileContentType.Image:
+        <RadzenStack Style="height: 100%" JustifyContent="JustifyContent.Center" AlignItems="AlignItems.Center">
+            <RadzenImage Path="@FileContentModel.Content"></RadzenImage>
+        </RadzenStack>
+        break;
+    case FileContentType.Text:
+        <RadzenText Style="white-space: pre-line;">@FileContentModel.Content</RadzenText>
+        break;
+    case null:
+        break;
+    default:
+        throw new ArgumentOutOfRangeException();
+}

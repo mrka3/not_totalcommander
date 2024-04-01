@@ -1,0 +1,12 @@
+﻿@using NotTotalCommanderBlazor.Components
+
+@page "/"
+
+<RadzenSplitter Orientation="Orientation.Horizontal" Collapse="@(args => args.Cancel = true)" Resize="@(args => args.Cancel = true)">
+    <RadzenSplitterPane>
+        <DirectoryTable OnSelectChange="HandleChangeSelect"></DirectoryTable>
+    </RadzenSplitterPane>
+    <RadzenSplitterPane>
+        <FileContentComponent FileContentModel="@FileContent"></FileContentComponent>
+    </RadzenSplitterPane>
+</RadzenSplitter>

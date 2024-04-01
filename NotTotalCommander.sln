@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotTotalCommanderBlazor", "NotTotalCommanderBlazor\NotTotalCommanderBlazor.csproj", "{743437ED-259D-44AE-A6B4-DC02F5837C1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotTotalCommanderLib", "NotTotalCommanderLib\NotTotalCommanderLib.csproj", "{8F17CDA5-8C35-45C1-9098-C019D7454B51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotTotalCommaderDesktop", "NotTotalCommaderDesktop\NotTotalCommaderDesktop.csproj", "{BCCD18A2-9668-4C67-9656-D2F6AEFDA5DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{743437ED-259D-44AE-A6B4-DC02F5837C1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{743437ED-259D-44AE-A6B4-DC02F5837C1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{743437ED-259D-44AE-A6B4-DC02F5837C1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{743437ED-259D-44AE-A6B4-DC02F5837C1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F17CDA5-8C35-45C1-9098-C019D7454B51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F17CDA5-8C35-45C1-9098-C019D7454B51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F17CDA5-8C35-45C1-9098-C019D7454B51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F17CDA5-8C35-45C1-9098-C019D7454B51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCCD18A2-9668-4C67-9656-D2F6AEFDA5DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCCD18A2-9668-4C67-9656-D2F6AEFDA5DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCCD18A2-9668-4C67-9656-D2F6AEFDA5DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCCD18A2-9668-4C67-9656-D2F6AEFDA5DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
